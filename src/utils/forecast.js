@@ -7,7 +7,7 @@ const forecast=(latitude,longitude,callback)=>{
         else if(response.error)
         callback('Unable to find location.')
         else
-        callback(undefined,'The observation time for the location is '+response.body.current.observation_time+' and the temperature right now is '+response.body.current.temperature+' degrees.The weather is somewhat '+response.body.current.weather_descriptions[0]+' with a wind speed and wind direction '+response.body.current.wind_speed+' and '+response.body.current.wind_dir+' respectively.'
+        callback(undefined,'The observation time for the location was '+response.body.current.observation_time+' and the temperature is '+response.body.current.temperature+' degrees.The weather could be somewhat '+response.body.current.weather_descriptions[0]+' with a wind speed and wind direction '+response.body.current.wind_speed+' and '+response.body.current.wind_dir+' respectively.'
         )
     })
 
